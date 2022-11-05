@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>BookYourComedyShowTicket</title>
+	<link rel="stylesheet" href="/css/style-book.css">
+	<script type="text/javascript" src="../js/book-show-script.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<header>
+		<h1>Enter Details</h1>
+	</header>
+
+	<form method="get" action="Thankyou.html">
+		<div class="root">
+			<div class="left">
+				<img src="../images/habitat.jpg" alt="Habitat Hall">
+			</div>
+			<div class="right">
+				<form action="thankyou.html">
+					<label>
+						Enter your name:</br>
+						<input type="text" id="fname" class="details" placeholder="Name" onblur="nameValidate();">
+						<br>
+						<span id="errname">&nbsp;</span>
+					</label>
+					<br><br>
+					<label>
+						Enter your number:</br>
+						<input type="text" id="fphone" class="details" placeholder="+91-XXXXXXXXXX" onblur="numberValidate();">
+						<br>
+						<span id="errphone">&nbsp;</span>
+					</label>
+					<br><br>
+					<label>
+						Enter number of tickets:</br>
+						<input type="number" id="fticketno" class="details" min="1" max="5" placeholder="Min:1 and Max:5"
+							onblur="ticketValidate()" />
+							<br>
+						<span id="errticket">&nbsp;</span>
+					</label>
+					</br></br>
+					<label>
+						Do you want beverages to be served to <br>each of your ticket:
+					</label>
+					</br></br>
+					<input type="radio" id="yes" name="yesorno" onclick="displaycost();">
+					<label>Yes</label>
+					</br></br>
+					<input type="radio" id="no" name="yesorno" onclick="displaycost();">
+					<label>No</label>
+					</br></br>
+
+					<input onclick="window.location.href='thankyou.html';" class="btn" value="Book Tickets" id="btn" type="button">
+				</form>
+			</div>
+		</div>
+	</form> 	
+	<footer>Made by&nbsp;Shruti, Swara, Krish, Hitakrit</a>&nbsp;| 2022.</footer>
+
+</body>
+</html>

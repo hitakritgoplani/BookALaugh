@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title></title>
+	<link rel="stylesheet" href="../css/style-index.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="root">
+		<div class="left">
+			<h1><strong>Book&nbsp;&nbsp;A&nbsp;&nbsp;Laugh</strong></h1>
+		</div>
+		<div class="right">
+			<form action="./intro.html">
+				<h2 id="login">Login</h2>
+				<label>
+					Enter your email:</br>
+					<input id="email" type="text" placeholder="Enter Email">
+				</label>
+
+				<label>
+					Enter your password:</br>
+					<input id="password" type="password" placeholder="Enter password">
+				</label>
+
+				<input class="btn" value="Login" id="btn" type="button">
+			</form>
+		</div>
+	</div>
+	<footer>Made by&nbsp;Shruti, Swara, Krish, Hitakrit</a>&nbsp;| 2022.</footer>
+
+	<script type="module">
+		import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js';
+		import {
+			getAuth,
+			signInWithEmailAndPassword
+		} from 'https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js';
+
+		const firebaseApp = initializeApp({
+			apiKey: "AIzaSyCZ9nrd2HsHvyLeWQeBzuqzzatjjoHbwCk",
+			authDomain: "se-lab-cc915.firebaseapp.com",
+			databaseURL: "https://se-lab-cc915-default-rtdb.firebaseio.com",
+			projectId: "se-lab-cc915",
+			storageBucket: "se-lab-cc915.appspot.com",
+			messagingSenderId: "621591600946",
+			appId: "1:621591600946:web:5086200597205b089d412b",
+			measurementId: "G-6C043GV72T"
+		});
+
+		const loginEmailPassword = async () => {
+			const loginEmail = document.getElementById('email').value
+			const loginPassword = document.getElementById('password').value
+
+			try {
+				await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+				window.location.href = './available-shows.html';
+			}
+			catch (error) {
+				console.log(`There was an error: ${error}`)
+				alert("Invalid credentials or user doesn't exists");
+				var login = document.getElementById("login");
+				login.innerHTML = "Login again";
+			}
+		}
+		btn.addEventListener("click", loginEmailPassword)
+		const auth = getAuth(firebaseApp);
+
+	</script>
+
+</body>
+
+</html>
