@@ -18,7 +18,7 @@ session_start();
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
-	<title>Document</title>
+	<title>Book A Laugh</title>
 </head>
 <body>
 	<header>
